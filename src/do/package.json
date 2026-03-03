@@ -9,7 +9,7 @@
     "11ty": "cd ../ && NODE_OPTIONS='--preserve-symlinks' eleventy",
     "11ty:clean": "rm -r ../_site",
     "11ty:debug": "DEBUG=* npm run 11ty --",
-    "tw": "tailwindcss -i ../_styles/styles.css -o ../_public/styles.css",
+    "tw": "cd ../ && tailwindcss -i ./_styles/styles.css -o ./_public/styles.css",
     "tw:debug": "DEBUG=* npm run tw --"
   }
 }
