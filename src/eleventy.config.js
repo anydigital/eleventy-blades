@@ -1,3 +1,5 @@
+// <!--section:code-->```js
+
 /* Plugins */
 import { RenderPlugin } from "@11ty/eleventy";
 import eleventyBladesPlugin from "@anydigital/eleventy-blades";
@@ -115,3 +117,34 @@ export default function (eleventyConfig) {
   // Follow symlinks in Chokidar used by 11ty to watch files
   eleventyConfig.setChokidarConfig({ followSymlinks: true });
 }
+/*```
+
+<!--section:docs-->
+### Base `eleventy.config.js` {#base-config}
+
+The package includes a fully-configured Eleventy config file `eleventy.config.js` that you can symlink to your project to get:
+
+- All eleventy-blades plugins enabled
+- Eleventy Navigation plugin
+- Table of Contents plugin (conditionally loaded if installed)
+- Markdown-it with anchors and attributes
+- YAML data support
+- CLI input directory support
+- Symlink support for development
+- _and more_
+
+**Benefits of symlinking:**
+
+- **Always up-to-date**: Configuration automatically updates when you upgrade the package
+- **Less maintenance**: No need to manually sync configuration changes
+- **Quick setup**: Get started immediately with best-practice configurations
+- **Easy customization**: Override specific settings by creating your own config that imports from the symlinked version
+
+**Installation as simple as:**
+
+```sh
+npm install @anydigital/eleventy-blades
+ln -s ./node_modules/@anydigital/eleventy-blades/src/eleventy.config.js
+```
+<!--section-->
+*/

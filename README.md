@@ -9,13 +9,14 @@ Ultimate blade kit for 11ty (Build Awesome):
 
 <big>
 
+- [Base eleventy.config.js](https://blades.ninja/build-awesome-11ty/#base-config)
 - [Reusable npm scripts](https://blades.ninja/build-awesome-11ty/#npm-scripts)
 
 {.columns}
 
 </big>
 
-<details><summary role="button" class="outline">Install Eleventy blades</summary>
+<details><summary role="button" class="outline"><b>Install Eleventy blades</b></summary>
 
 ```sh
 npm install @anydigital/eleventy-blades
@@ -30,6 +31,8 @@ Consider symlinking entire `eleventy.config.js`:
 ```sh
 ln -s ./node_modules/@anydigital/eleventy-blades/src/eleventy.config.js
 ```
+
+Learn more: https://blades.ninja/build-awesome-11ty/#base-config
 
 Living examples:
 
@@ -84,32 +87,7 @@ Or use a fully preconfigured:
 
 <!--section:config-h3-->
 
-### 🥷 Symlinked `eleventy.config.js` <br><sub>from https://github.com/anydigital/eleventy-blades</sub> <a id="symlink-config"></a>
-
-The package includes a fully-configured Eleventy config file `eleventy.config.js` that you can symlink to your project to get:
-
-- All eleventy-blades plugins enabled
-- Eleventy Navigation plugin
-- Table of Contents plugin (conditionally loaded if installed)
-- Markdown-it with anchors and attributes
-- YAML data support
-- CLI input directory support
-- Symlink support for development
-- _and more_
-
-**Benefits of symlinking:**
-
-- **Always up-to-date**: Configuration automatically updates when you upgrade the package
-- **Less maintenance**: No need to manually sync configuration changes
-- **Quick setup**: Get started immediately with best-practice configurations
-- **Easy customization**: Override specific settings by creating your own config that imports from the symlinked version
-
-**Installation as simple as:**
-
-```sh
-npm install @anydigital/eleventy-blades
-ln -s ./node_modules/@anydigital/eleventy-blades/src/eleventy.config.js
-```
+### 🥷
 
 <!--section-->
 
