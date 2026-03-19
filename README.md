@@ -96,6 +96,6 @@ export default function (eleventyConfig) {
 
 </details>
 
-Or use a fully preconfigured:
+Or use a preconfigured template:
 
 [🥷 Build Awesome Starter ↗ &nbsp;<small>11ty + Tailwind + Typography + Blades</small>](https://github.com/anydigital/build-awesome-starter){role=button .outline}
