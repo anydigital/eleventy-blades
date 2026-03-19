@@ -9,8 +9,10 @@ Ultimate blade kit for 11ty (Build Awesome):
 
 <big>
 
-- [Base eleventy.config.js](https://blades.ninja/build-awesome-11ty/#base-config)
-- [Reusable npm scripts](https://blades.ninja/build-awesome-11ty/#npm-scripts)
+- [Data helpers](https://blades.ninja/build-awesome-11ty/#data-helpers)
+- [Auto link favicons](https://blades.ninja/build-awesome-11ty/#auto-link-favicons) {data-marker=🥷}
+- [Base eleventy.config.js](https://blades.ninja/build-awesome-11ty/#base-config) {data-marker=🥷}
+- [Reusable npm scripts](https://blades.ninja/build-awesome-11ty/#npm-scripts) {data-marker=🥷}
 
 {.columns}
 
@@ -81,77 +83,7 @@ Or use a fully preconfigured:
 
 [🥷 Build Awesome Starter ↗ &nbsp;<small>11ty + Tailwind + Typography + Blades</small>](https://github.com/anydigital/build-awesome-starter){role=button .outline}
 
-<!--section-->
-
-## Configuration Tools
-
-<!--section:config-h3-->
-
-### 🥷
-
-<!--section-->
-
-## Data Tools & Processors
-
 <!--section:data&processors-h3-->
-
-### Global `siteData` helper
-
-🧩 [Install via Plugin](https://github.com/anydigital/eleventy-blades#install) — or copy-paste from
-[`src/siteData.js`](https://github.com/anydigital/eleventy-blades/blob/main/src/siteData.js)
-
-Adds global `site` data to your Eleventy project, providing commonly needed values that can be accessed in all templates:
-
-| Variable          | Value                                                                                                        |
-| ----------------- | ------------------------------------------------------------------------------------------------------------ |
-| `{{ site.year }}` | The current year as a number (e.g., `2026`)                                                                  |
-| `{{ site.prod }}` | Boolean indicating if running in production mode (`true` for `eleventy build`, `false` for `eleventy serve`) |
-
-### 🥷 `autoLinkFavicons` transformer
-
-🧩 [Install via Plugin](https://github.com/anydigital/eleventy-blades#install) — or copy-paste from
-[`src/processors/autoLinkFavicons.js`](https://github.com/anydigital/eleventy-blades/blob/main/src/processors/autoLinkFavicons.js)
-
-Automatically adds favicon images from Google's favicon service to links that display plain URLs or domain names. This processor processes all HTML output files and adds inline favicon images next to link text that appears to be a plain URL.
-
-**Why use this?** When you have links in your content that display raw URLs or domain names (like `https://example.com/page`), adding favicons provides a visual indicator of the external site. This processor automatically detects these plain-text URL links and enhances them with favicon images, making them more visually appealing and easier to recognize.
-
-**How it works:**
-
-1. Scans all HTML output files for `<a>` tags
-2. Checks if the link text appears to be a plain URL or domain
-3. Extracts the domain from the URL
-4. Removes the domain from the link text (keeping only the path)
-5. Adds a favicon image from Google's favicon service inline with the remaining text
-
-**Example:**
-
-Before processing:
-
-```html
-<a href="https://github.com/anydigital/eleventy-blades">https://github.com/anydigital/eleventy-blades</a>
-```
-
-After processing:
-
-```html
-<a href="https://github.com/anydigital/eleventy-blades" class="whitespace-nowrap" target="_blank">
-  <i><img src="https://www.google.com/s2/favicons?domain=github.com&sz=32" /></i>
-  <span>/anydigital/eleventy-blades</span>
-</a>
-```
-
-**Rules:**
-
-- Only applies to links where the text looks like a plain URL (contains the domain or starts with `http://`/`https://`)
-- Removes the protocol and domain from the display text
-- Removes the trailing slash from the display text
-- Only applies if at least 3 characters remain after removing the domain (to avoid showing favicons for bare domain links)
-- Uses Google's favicon service at `https://www.google.com/s2/favicons?domain=DOMAIN&sz=32`
-- Adds `target="_blank"` to the processed links (only if not already present)
-- Adds `whitespace-nowrap` class to the link
-- Wraps the link text in a `<span>` element
-- The favicon is wrapped in an `<i>` tag for easy styling
 
 <details><summary>
 

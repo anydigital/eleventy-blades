@@ -1,3 +1,4 @@
+// <!--section:code-->```js
 /**
  * Check if link text looks like a plain URL or domain
  *
@@ -105,3 +106,49 @@ export function autoLinkFavicons(eleventyConfig) {
     return content;
   });
 }
+/*```
+
+<!--section:docs-->
+### `autoLinkFavicons` transformer {#auto-link-favicons}
+
+Automatically adds favicon images from Google's favicon service to links that display plain URLs or domain names. This processor processes all HTML output files and adds inline favicon images next to link text that appears to be a plain URL.
+
+**Why use this?** When you have links in your content that display raw URLs or domain names (like `https://example.com/page`), adding favicons provides a visual indicator of the external site. This processor automatically detects these plain-text URL links and enhances them with favicon images, making them more visually appealing and easier to recognize.
+
+**How it works:**
+
+1. Scans all HTML output files for `<a>` tags
+2. Checks if the link text appears to be a plain URL or domain
+3. Extracts the domain from the URL
+4. Removes the domain from the link text (keeping only the path)
+5. Adds a favicon image from Google's favicon service inline with the remaining text
+
+**Example:**
+
+Before processing:
+
+```html
+<a href="https://github.com/anydigital/eleventy-blades">https://github.com/anydigital/eleventy-blades</a>
+```
+
+After processing:
+
+```html
+<a href="https://github.com/anydigital/eleventy-blades" class="whitespace-nowrap" target="_blank">
+  <i><img src="https://www.google.com/s2/favicons?domain=github.com&sz=32" /></i>
+  <span>/anydigital/eleventy-blades</span>
+</a>
+```
+
+**Rules:**
+
+- Only applies to links where the text looks like a plain URL (contains the domain or starts with `http://`/`https://`)
+- Removes the protocol and domain from the display text
+- Removes the trailing slash from the display text
+- Only applies if at least 3 characters remain after removing the domain (to avoid showing favicons for bare domain links)
+- Uses Google's favicon service at `https://www.google.com/s2/favicons?domain=DOMAIN&sz=32`
+- Adds `target="_blank"` to the processed links (only if not already present)
+- Adds `whitespace-nowrap` class to the link
+- Wraps the link text in a `<span>` element
+- The favicon is wrapped in an `<i>` tag for easy styling
+*/
