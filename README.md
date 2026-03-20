@@ -11,6 +11,7 @@ Ultimate blade kit for 11ty (Build Awesome).
 
 [**Filters**](https://blades.ninja/build-awesome-11ty/filters/)
 
+<!--prettier-ignore-->
 - [attr_concat](  https://blades.ninja/build-awesome-11ty/filters/#attr-concat),
   [attr_includes](https://blades.ninja/build-awesome-11ty/filters/#attr-includes),
   [attr_set](     https://blades.ninja/build-awesome-11ty/filters/#attr-set)
@@ -26,6 +27,7 @@ Ultimate blade kit for 11ty (Build Awesome).
 
 [**Other**](https://blades.ninja/build-awesome-11ty/)
 
+<!--prettier-ignore-->
 - [Auto link favicons](     https://blades.ninja/build-awesome-11ty/#auto-link-favicons) {data-marker=🥷}
 - [Auto-raw tags](          https://blades.ninja/build-awesome-11ty/#auto-raw)
 - [Auto newlines-to-br](    https://blades.ninja/build-awesome-11ty/#auto-nl2br)
@@ -101,7 +103,9 @@ Or use a preconfigured template:
 [🥷 Build Awesome Starter ↗ &nbsp;<small>11ty + Tailwind + Typography + Blades</small>](https://github.com/anydigital/build-awesome-starter){role=button .outline}
 
 <!--section:gh-only-->
+
 ---
 
 Featured by:
+
 - https://hamatti.org/posts/markdown-content-split-to-sections-in-eleventy-and-nunjucks/#:~:text=anydigital
