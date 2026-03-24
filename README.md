@@ -34,7 +34,7 @@ Ultimate blade kit for 11ty (Build Awesome):
 <!--{.unlist .columns}-->
 
 <!--section:index,install-->
-<details><summary role="button" class="outline" id="install-11ty-blades"><b>Install Eleventy blades</b></summary>
+<details><summary role="button" class="outline"><b id="install-11ty-blades">Install Eleventy blades</b></summary>
 
 ```sh
 npm install @anydigital/eleventy-blades
