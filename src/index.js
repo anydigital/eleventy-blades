@@ -49,6 +49,11 @@ export default function eleventyBladesPlugin(eleventyConfig, options = {}) {
     autoLinkFavicons,
     siteData,
   };
+  Object.entries(options).forEach(([key, enabled]) => {
+    if (key !== "filters" && enabled && plugins[key]) {
+      plugins[key](eleventyConfig);
+    }
+  });
 
   const filters = {
     attr_set: attrSetFilter,
@@ -61,16 +66,10 @@ export default function eleventyBladesPlugin(eleventyConfig, options = {}) {
     section: sectionFilter,
     unindent: unindentFilter,
     ...(fetchFilter && { fetch: fetchFilter }),
+    date: (eleventyConfig) => {
+      eleventyConfig.addFilter("date", (dateVal) => new Date(dateVal).toISOString().split("T")[0]);
+    },
   };
-
-  // Handle individual plugin options
-  Object.entries(options).forEach(([key, enabled]) => {
-    if (key !== "filters" && enabled && plugins[key]) {
-      plugins[key](eleventyConfig);
-    }
-  });
-
-  // Handle filters array
   if (Array.isArray(options.filters)) {
     options.filters.forEach((filterName) => {
       if (filters[filterName]) {

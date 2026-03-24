@@ -59,7 +59,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addGlobalData("layout", "default");
   eleventyConfig.setLiquidOptions({ dynamicPartials: false }); // allows unquoted Jekyll-style includes
-  eleventyConfig.addFilter("relative_url", (content) => content);
+  eleventyConfig.addFilter("relative_url", (content) => content); // dummy
 
   /* Plugins */
   eleventyConfig.addPlugin(RenderPlugin);
@@ -80,6 +80,7 @@ export default function (eleventyConfig) {
       "section",
       "strip_tag",
       "unindent",
+      "date",
     ],
   });
   if (pluginTOC) {
@@ -125,10 +126,7 @@ export default function (eleventyConfig) {
   }
   if (markdownItAttrs) md = md.use(markdownItAttrs);
   eleventyConfig.setLibrary("md", md);
-
-  // Filters
   eleventyConfig.addFilter("markdownify", (content) => md.render(String(content ?? "")));
-  eleventyConfig.addFilter("iso_date", (dateVal) => new Date(dateVal).toISOString().split("T")[0]);
 
   /* Data */
   eleventyConfig.addDataExtension("yml", (contents) => yaml.load(contents));
