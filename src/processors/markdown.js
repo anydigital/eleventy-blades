@@ -57,34 +57,25 @@ export function mdAutoNl2br(eleventyConfig) {
     };
   });
 }
+/*```
+<!--section:docs-->
 
-/**
- * Transform <!--{...}--> sequences to {...}
- *
- * This function expands HTML-comment-wrapped attribute blocks back to their
- * raw form, converting <!--{...}--> to just {...}.
- *
- * @param {string} content - The content to transform
- * @returns {string} The transformed content with <!--{...}--> unwrapped
- */
-export function transformUncommentAttrs(content) {
-  if (content.includes("<!--{")) {
-    content = content.replace(/<!--(\{[^}]*\})-->/g, "$1");
-  }
-  return content;
-}
+### `mdAutoUncommentAttrs` converter 🆕 {#hidden-attrs}
 
+This function amends the markdown library to automatically expand
+HTML-comment-wrapped attribute blocks `<!—-{...}-->` to their raw form
+`{...}`, which is useful when attribute syntax needs to be hidden from
+HTML parsers but expanded before markdown-it processes them.
+
+Implemented as a core rule so the transformation runs on the raw source
+before markdown-it-attrs (or any other plugin) parses the content.
+
+Usage example: https://github.com/anydigital/eleventy-blades/blob/main/src/eleventy.config.js
+
+How it works:
+```js */
 /**
- * mdAutoUncommentAttrs - Auto expand <!--{...}--> to {...} in markdown
- *
- * This function amends the markdown library to automatically expand
- * HTML-comment-wrapped attribute blocks (<!--{...}-->) to their raw form
- * ({...}), which is useful when attribute syntax needs to be hidden from
- * HTML parsers but expanded before markdown-it processes them.
- *
- * Implemented as a core rule so the transformation runs on the raw source
- * before markdown-it-attrs (or any other plugin) parses the content.
- *
+ * Auto expand <!--{...}--> to {...} in markdown
  * @param {Object} eleventyConfig - The Eleventy configuration object
  */
 export function mdAutoUncommentAttrs(eleventyConfig) {
@@ -94,10 +85,14 @@ export function mdAutoUncommentAttrs(eleventyConfig) {
     });
   });
 }
-
+// Underlying helper function
+export function transformUncommentAttrs(content) {
+  if (content.includes("<!--{")) {
+    content = content.replace(/<!--(\{[^}]*\})-->/g, "$1");
+  }
+  return content;
+}
 /*```
-
-<!--section:docs-->
 ### `mdAutoRawTags` preprocessor {#auto-raw}
 
 Prevents Nunjucks syntax from being processed in Markdown files by automatically wrapping `{{`, `}}`, `{%`, and `%}` with `{% raw %}` tags.
@@ -161,8 +156,4 @@ Will render as:
 ```
 
 **Note:** This processes literal `\n` sequences (backslash followed by 'n'), not actual newline characters. Type `\n` in your source files where you want line breaks.
-
-### `mdAutoUncommentAttrs` converter 🆕 {#hidden-attrs}
-
-https://github.com/anydigital/eleventy-blades/blob/main/src/processors/markdown.js
-*/
+<!--section--> */
