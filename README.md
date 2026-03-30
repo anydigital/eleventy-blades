@@ -93,9 +93,15 @@ export default function (eleventyConfig) {
 
 </details>
 
-Or use a preconfigured template:
+Or use one of preconfigured templates:
+
+<nav>
 
 [🥷 Build Awesome Starter ↗ &nbsp;<small style="white-space: nowrap">11ty ⁺ Tailwind ⁺ Typography ⁺ Blades</small>](https://github.com/anydigital/build-awesome-starter)<!--{role=button .outline}-->
+
+[🥷 Bladeswitch Starter ↗ &nbsp;<small style="white-space: nowrap">11ty ⁺ Pico ⁺ Blades</small>](https://github.com/anydigital/bladeswitch)<!--{role=button .outline}-->
+
+</nav>
 
 <!--section:gh-only-->
 
