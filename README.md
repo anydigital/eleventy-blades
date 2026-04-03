@@ -1,10 +1,14 @@
-<!--section:index-->
+## <sub>Build Awesome /</sub><br> Eleventy blades <sup>![](https://img.shields.io/github/v/release/anydigital/eleventy-blades?label=&color=black)</sup>
 
-## <sup>Build Awesome plugin</sup><br> [Eleventy blades](/build-awesome-11ty/) <!--{#11ty}-->
+<!--section:summary-->
 
 Ultimate blade kit for 11ty (Build Awesome).
 
-<!--section:index,toc-->
+<!--section:docs-->
+
+## Documentation
+
+<!--section:toc-->
 <!--prettier-ignore-->
 - [Filters](              https://blades.ninja/build-awesome-11ty/filters/)
   - [attr_concat](        https://blades.ninja/build-awesome-11ty/filters/#attr-concat),
@@ -32,8 +36,7 @@ Ultimate blade kit for 11ty (Build Awesome).
 
 <!--{.unlist .columns}-->
 
-<!--section:index,install-->
-<details><summary role="button" class="outline" id="install-11ty-blades"><b>Install Eleventy blades</b></summary>
+## Install
 
 ```sh
 npm install @anydigital/eleventy-blades
@@ -49,7 +52,7 @@ Consider symlinking entire `eleventy.config.js` as a set-and-forget zero-config 
 ln -s ./node_modules/@anydigital/eleventy-blades/src/eleventy.config.js
 ```
 
-Learn more: https://blades.ninja/build-awesome-11ty/tools/#base-config
+Learn more: https://blades.ninja/11ty/tools/#base-config
 
 Living examples:
 
@@ -103,19 +106,17 @@ export default function (eleventyConfig) {
 }
 ```
 
-</details>
+---
 
-Or use one of preconfigured templates:
+Or use a <mark>fully preconfigured template</mark> as an alternative option:
 
 <nav>
 
-[🥷 Build Awesome Starter ↗ &nbsp;<small style="white-space: nowrap">11ty ⁺ Tailwind ⁺ Typography ⁺ Blades</small>](https://github.com/anydigital/build-awesome-starter)<!--{role=button .outline}-->
+[🥷 Build Awesome Starter ↗ &nbsp;<small style="white-space: nowrap">11ty + Tailwind + Typography + Blades</small>](https://github.com/anydigital/build-awesome-starter)<!--{role=button .outline}-->
 
-[🥷 Bladeswitch Starter ↗ &nbsp;<small style="white-space: nowrap">11ty ⁺ Pico ⁺ Blades</small>](https://github.com/anydigital/bladeswitch)<!--{role=button .outline}-->
+[🥷 Bladeswitch Starter ↗ &nbsp;<small style="white-space: nowrap">11ty + Pico + Blades</small>](https://github.com/anydigital/bladeswitch)<!--{role=button .outline}-->
 
 </nav>
-
-<!--section:gh-only-->
 
 ---
 
