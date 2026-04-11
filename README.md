@@ -1,12 +1,16 @@
-## <sub>Build Awesome /</sub><br> Eleventy blades <sup>![](https://img.shields.io/github/v/release/anyblades/eleventy-blades?label=&color=black)</sup>
+# 🥷 *Eleventy Bl*ades
 
 <!--section:summary-->
 
 Ultimate blade kit for 11ty (Build Awesome).
 
+![](https://img.shields.io/github/v/release/anyblades/eleventy-blades?label=&color=darkslategray&style=for-the-badge&include_prereleases)
+[![](https://img.shields.io/badge/Code-gainsboro?logo=github&logoColor=black&style=for-the-badge)](https://github.com/anyblades/eleventy-blades)
+[![](https://img.shields.io/github/stars/anyblades/eleventy-blades?label=Star&labelColor=gainsboro&color=silver&style=for-the-badge)](https://github.com/anyblades/eleventy-blades)
+
 <!--section:docs-->
 
-## Documentation
+## [Documentation <i><small>→</small></i>](https://blades.ninja/build-awesome-11ty/)
 
 <!--prettier-ignore-->
 - [Filters](              https://blades.ninja/build-awesome-11ty/filters/)
