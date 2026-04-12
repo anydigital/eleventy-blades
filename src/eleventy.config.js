@@ -95,9 +95,9 @@ export default function (eleventyConfig) {
   });
   if (pluginTOC) {
     eleventyConfig.addPlugin(pluginTOC, {
-      ignoredElements: ["sub", "[data-is-anchor]"],
+      ignoredElements: [".header-anchor", "sub"],
       ul: true,
-      wrapper: (toc) => `<div data-is-toc>${toc}</div>`,
+      wrapper: (toc) => `${toc}`,
     });
   }
   // https://www.11ty.dev/docs/plugins/rss/#virtual-template
@@ -128,7 +128,7 @@ export default function (eleventyConfig) {
   if (markdownItAnchor) {
     md = md.use(markdownItAnchor, {
       slugify: slugify, // @TODO: TRICKS
-      permalink: markdownItAnchor.permalink.ariaHidden({ class: null }),
+      permalink: markdownItAnchor.permalink.ariaHidden(),
     });
   }
   if (markdownItAttrs) md = md.use(markdownItAttrs);
