@@ -127,6 +127,8 @@ export default function (eleventyConfig) {
 
 - https://github.com/anyblades/build-awesome-starter
 - https://github.com/anyblades/bladeswitch starter
+- https://github.com/johnheenan/minform
+- https://github.com/hostfurl/minformhf
 
 <!--section:featured-->
 
