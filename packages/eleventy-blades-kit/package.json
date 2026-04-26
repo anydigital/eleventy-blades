@@ -1,6 +1,6 @@
 {
   "name": "@anyblades/eleventy-blades-kit",
-  "version": "0.0.1-dev",
+  "version": "0.0.1-alpha",
   "type": "module",
   "author": "Anton Staroverov",
   "license": "MIT",
